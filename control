@@ -1,0 +1,9 @@
+Package: com.ps.polyfillsdebug
+Name: Debug (Polyfills)
+Version: 1.0.1
+Architecture: iphoneos-arm
+Description: Prints browser console logs directly to the web page.
+Maintainer: PoomSmart
+Author: PoomSmart
+Section: Tweaks
+Depends: com.ps.polyfills (>= 2.12.0)
