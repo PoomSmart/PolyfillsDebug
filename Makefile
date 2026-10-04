@@ -15,6 +15,9 @@ js:
 					out="$(ASSETS_PATH)/$$dir/base/$$base.js"; \
 					mkdir -p "$$(dirname "$$out")"; \
 					npx uglify-js "$$file" --compress arrows=false --mangle -o "$$out"; \
+					if [ -f "$$dir/$$base.json" ]; then \
+						cp "$$dir/$$base.json" "$(ASSETS_PATH)/$$dir/base/$$base.json"; \
+					fi; \
 					echo "Minified $$file -> $$out"; \
 				fi; \
 			done; \
